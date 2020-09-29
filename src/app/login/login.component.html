@@ -1,0 +1,46 @@
+
+<div class="container">
+  <div class="welcome"><span>Welcome to users management</span></div>
+  <div class="content">
+    <form #loginForm="ngForm" class="login-form" (submit)="loginData()">
+      <h3 class="login-title">Login</h3>
+      <div class="login-info">
+                <span>
+                    <input type="text" class="username" name="username" pInputText placeholder="Username"
+                           [(ngModel)]="username" required  #uname="ngModel"
+                            data-input-username />
+                    <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="errMsg">
+                        <div *ngIf="uname.errors.required">
+                            Username is required.
+                        </div>
+                    </div>
+
+                </span>
+      </div>
+
+      <div class="login-info">
+        <div>
+          <input type="password" class="password" name="password" pInputText placeholder="Password"
+                 [(ngModel)]="password" required #pwd="ngModel" data-input-password />
+
+          <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)" class="errMsg">
+            <div *ngIf="pwd.errors.required">
+              Password is required.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="forgot-div">
+        <a class="forgot" href="#">Forgot Password?</a>
+      </div>
+
+      <button pButton class="loginBtn" type="submit" label="Login"
+              [disabled]="!loginForm.form.valid" data-btn-login>
+      </button>
+
+    </form>
+
+  </div>
+</div>

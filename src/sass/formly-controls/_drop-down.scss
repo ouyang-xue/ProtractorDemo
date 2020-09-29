@@ -1,0 +1,77 @@
+@import "../variables";
+
+.form-group {
+  .drop-down-elem {
+    //width: 100%;
+
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+p-dropdown {
+  &.ng-invalid.ng-touched {
+    border: 1px solid #ff6165;
+    .ui-dropdown-panel {
+      .ui-dropdown-list {
+        width: calc(100% + 4px);
+      }
+    }
+  }
+
+  .ui-dropdown {
+
+    &.formly-dropdown {
+      max-width: $form-input-max-width;
+    }
+
+    .ui-dropdown-trigger {
+      .ui-dropdown-trigger-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 15px;
+        position: absolute;
+        transition: none;
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+    }
+
+    &.ui-dropdown-open {
+      .ui-clickable {
+        &.fa-caret-down {
+          transform: translate(-50%, -50%) rotate(-180deg) !important;
+        }
+      }
+    }
+
+    .ui-dropdown-panel {
+      .ui-dropdown-list {
+        padding: 0;
+        width: calc(100% + 2px);
+        .ui-dropdown-item{
+          border-bottom: 1px solid #0000007F;
+          &:last-child{
+            border-bottom: none;
+          }
+          &:hover{
+            background-color: #191b1f ;
+            color:white;
+          }
+        }
+      }
+    }
+  }
+  .include-dd-types{
+    width: 21%;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+  }
+  .include-dd-tunnel{
+    width: 76%;
+    margin-bottom: 10px;
+  }
+}
+

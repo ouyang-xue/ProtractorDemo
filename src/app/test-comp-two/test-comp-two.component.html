@@ -1,0 +1,45 @@
+<h2>test protractor</h2>
+<br>
+<br>
+
+<input class="user-count" type="text" value="{{ userCount }}"
+       ng-model="userCount" placeholder="change the value" data-input-user-count>
+<button data-btn-add (click)="addValue()">Add Count</button>
+
+<br>
+<br>
+<br>
+
+<div class="list-div">
+  <ul class="ul-class">
+    <li class="li-class" data-li>
+      li--1
+      <!--        <p-checkbox data-checkbox></p-checkbox>-->
+      <input type="checkbox" value="Checkbox" data-checkbox>
+    </li>
+    <li class="li-class" data-li>
+      li--2
+<!--      <a href="http://localhost:4200/test" data-a-bai-du >Back to Comp1</a>-->
+      <select ng-model="number" ng-options="data-select-number">
+        <option value ="one">one</option>
+        <option value ="two">two</option>
+        <option value="three">three</option>
+        <option value="four">four</option>
+      </select>
+
+    </li>
+    <li class="li-class" data-li>
+      li--3
+      <button data-btn-to-comp3 (click)="toComp3()">To Comp3</button>
+    </li>
+  </ul>
+</div>
+
+<ng-template [ngIf]="isSelected">
+  <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+  <button type="button" (click)="confirm1()"
+          pButton icon="pi pi-check"
+          data-li-btn-popmenu label="Confirm">
+  </button>
+  <p-messages [value]="msgs"></p-messages>
+</ng-template>

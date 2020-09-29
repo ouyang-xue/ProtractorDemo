@@ -1,0 +1,72 @@
+p-autocomplete {
+  &.ng-invalid.ng-touched {
+    border: 1px solid #ff6165;
+  }
+  .ui-autocomplete {
+    width: 100%;
+    &.auto-complete-input {
+      max-width: $form-input-max-width;
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .exclude-auto-complete {
+
+    .ui-autocomplete-multiple-container:not(.ui-state-disabled).ui-state-focus {
+      border-color: white;
+      box-shadow: none;
+    }
+    ul.ui-inputtext {
+      width: 100%;
+      max-height: 240px;
+      padding: 10px;
+      overflow: scroll;
+      height: auto;
+      line-height: 25px;
+      .ui-autocomplete-token{
+        font-size: 14px;
+        background-color: rgba(218, 222, 231, 0.4);;
+        width: 100%;
+        margin: 2.5px 0;
+        height: 25px;
+        line-height: 25px;
+        color: rgba(36, 51, 62, 0.8);
+        border-radius: 2px;
+        .ui-autocomplete-token-icon{
+          font-size: 12px;
+          color: rgba(80, 92, 101, 0.8);
+        }
+        .ui-autocomplete-token-label{
+          margin-right: 1em;
+        }
+      }
+      .ui-autocomplete-input-token{
+        input {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .include-auto-complete {
+    width: 76%;
+    margin-bottom: 10px;
+  }
+}
+
+.ui-autocomplete-panel {
+  .ui-autocomplete-list {
+    background-color: rgb(39, 47, 66);
+    color: white;
+    padding: 0;
+
+    .ui-autocomplete-list-item {
+      padding: .4em;
+
+      &:hover {
+        background-color: #191b1f;
+        color: white;
+      }
+    }
+  }
+}

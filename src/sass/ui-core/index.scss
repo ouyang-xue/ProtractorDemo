@@ -1,0 +1,50 @@
+
+// html direction
+$htmlDirection: ltr !default;
+$ui-space-prefix:   unquote('.ui-space');
+
+$ui-spacing-tiny :    0.5rem;
+$ui-spacing-small :   1rem;
+$ui-spacing-regular : 1.5rem;
+$ui-spacing-medium :  2.5rem;
+$ui-spacing-large :   3rem;
+$ui-spacing-xl-large : 4.5rem;
+
+
+@function htmlDirection(){
+  @if ($htmlDirection == ltr) {
+    @return left;
+  } @else {
+    @return right;
+  }
+}
+@function htmlDirection-rev(){
+  @if ($htmlDirection == ltr) {
+    @return right;
+  } @else {
+    @return left;
+  }
+}
+
+
+
+@import "ui-flexbox";
+@import "ui-helpers";
+@import "ui-forms";
+@import "ui-mixins";
+
+@include ui-space($suffix: 'tiny',    $prefix: $ui-space-prefix, $size: $ui-spacing-tiny);
+@include ui-space($suffix: 'small',   $prefix: $ui-space-prefix, $size: $ui-spacing-small);
+@include ui-space($suffix: 'regular', $prefix: $ui-space-prefix, $size: $ui-spacing-regular);
+@include ui-space($suffix: 'medium',  $prefix: $ui-space-prefix, $size: $ui-spacing-medium);
+@include ui-space($suffix: 'large',   $prefix: $ui-space-prefix, $size: $ui-spacing-large);
+@include ui-space($suffix: 'xl-large',   $prefix: $ui-space-prefix, $size: $ui-spacing-xl-large);
+
+
+#{$ui-space-prefix}-flat   { padding: 0 !important; }
+
+#{$ui-space-prefix}-flat-l { padding-#{htmlDirection()}: 0 !important; }
+#{$ui-space-prefix}-flat-r { padding-#{htmlDirection-rev()}: 0 !important; }
+
+#{$ui-space-prefix}-flat-t { padding-top: 0 !important; }
+#{$ui-space-prefix}-flat-b { padding-bottom: 0 !important; }

@@ -1,0 +1,13 @@
+@import "../variables";
+
+.wizard-text-input{
+  width: 100%;
+  max-width: $form-input-max-width;
+  height: 31px;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: roboto;
+  box-sizing: border-box;
+
+}

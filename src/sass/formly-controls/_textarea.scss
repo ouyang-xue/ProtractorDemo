@@ -1,0 +1,13 @@
+@import "../variables";
+
+formly-field {
+  .form-group {
+    textarea {
+        height: 83px;
+        resize: none;
+      width: $form-input-width;
+        border: 0;
+      }
+
+  }
+}

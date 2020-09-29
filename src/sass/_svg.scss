@@ -1,0 +1,124 @@
+/* +++++++ SVG icons +++++++
+   EXAMPLE:
+   // print svg image as is with its fill property
+   <i class="svg-icon small-icon filter"></i>
+
+   // print svg image as transparent mask which can be styled in css
+   // example as above but with inline CSS changing its fill color to blue
+   <i class="svg-icon small-icon filter transparent" style="background: blue"></i>
+ */
+
+.svg-icon {
+  width: 33px;
+  height: 33px;
+  background: 50% 50% / contain no-repeat;
+  display: inline-block;
+
+  &.pointer {
+    cursor: pointer;
+  }
+  &.tiny-icon {
+    width: 12px;
+    height: 12px;
+  }
+  &.small-icon {
+    width: 20px;
+    height: 20px;
+  }
+  &.mid-icon {
+    width: 25px;
+    height: 25px;
+  }
+  &.large-icon {
+    width: 60px;
+    height: 60px;
+  }
+  &.huge-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  &.active {
+    background-image: url(/assets/svgs/v-active.svg);
+  }
+  &.more {
+    &.light {
+      background-image: url(/assets/svgs/more-light.svg);
+    }
+  }
+  &.plus {
+    background-image: url(/assets/svgs/plus-no-circule.svg);
+  }
+  &.user-manual {
+    background-image: url(/assets/svgs/question-mark.svg);
+  }
+  &.alarm-notification {
+    background-image: url(/assets/svgs/bell.svg);
+  }
+  &.label-info {
+    background-image: url(/assets/svgs/question-mark-circule.svg);
+  }
+
+  &.delete {
+    background-image: url(/assets/svgs/delete.svg);
+  }
+
+  &.delete-include {
+    background-image: url(/assets/svgs/include_delete.svg);
+  }
+
+  &.arrow-link {
+    background-image: url(/assets/svgs/arrow-rectangle.svg);
+  }
+
+  $icons-list:
+         disabled
+         enabled
+         failed
+         more
+         search
+         edit-parameters
+         edit-columns
+         edit-points
+         copy
+         delete
+         close
+         warning
+         error
+         info
+         v-toaster
+         bell
+         alarm-triangle
+         left-arrow
+         right-arrow
+         ok
+         major
+         menu
+         minor
+         arrow
+         sort
+         arrow-white
+         arrow-round
+         export
+         filter
+         spinner
+         not-equal
+         no-data
+         loader
+         pause
+         pending
+         invalid date_picker add-card add-row
+         remove;
+
+  @each $icon in $icons-list {
+    &.#{$icon} {
+      content: '';
+      background-image: url(/assets/svgs/#{$icon}.svg);
+      &.transparent {
+        background: none;
+        mask: url(/assets/svgs/#{$icon}.svg) 50% 50% / contain no-repeat;
+      }
+    }
+  }
+}
+

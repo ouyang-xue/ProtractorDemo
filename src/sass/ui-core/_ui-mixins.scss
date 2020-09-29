@@ -1,0 +1,49 @@
+
+// Spacebox. Predefined semantic layout spacing
+// The order of each definition is very important
+$initUiSpace: false !default;
+
+@mixin ui-space($prefix, $suffix, $size) {
+
+  $suffix: unquote($suffix);
+
+  #{$prefix}-#{$suffix} { padding: #{$size}; }
+
+  // top and bottom, left and right.
+  #{$prefix}-tb-#{$suffix} {   padding-top: #{$size}; padding-bottom: #{$size};}
+  #{$prefix}-lr-#{$suffix} {   padding-#{htmlDirection-rev()}: #{$size}; padding-#{htmlDirection()}: #{$size}; }
+
+  // top, bottom, left, right
+  #{$prefix}-t-#{$suffix} {    padding-top: #{$size} !important; }
+  #{$prefix}-b-#{$suffix} {    padding-bottom: #{$size} !important; }
+  #{$prefix}-l-#{$suffix} {    padding-#{htmlDirection()}: #{$size} !important; }
+  #{$prefix}-r-#{$suffix} {    padding-#{htmlDirection-rev()}: #{$size} !important; }
+
+  #{$prefix}-verti-#{$suffix} {
+    @extend #{$prefix}-t-#{$suffix};
+  }
+
+  // inner box spacing. for performance sake we use limited selectors
+  #{$prefix}-inner-horiz-#{$suffix} {
+    margin-#{htmlDirection()}: -#{$size};
+    > * { padding-#{htmlDirection()}: #{$size}; ; }
+  }
+
+}
+
+
+// shorthand to stretch element height and width
+@mixin stretch($offset-top:0, $offset-right:0, $offset-bottom:0, $offset-left:0) {
+  position: absolute;
+  @if $offset-top { top: $offset-top; }
+  @if $offset-bottom { bottom: $offset-bottom; }
+  @if $offset-left { left: $offset-left; }
+  @if $offset-right { right: $offset-right; }
+}
+
+@mixin grid($gridAreas, $gridGap: 1.5rem){
+  display: grid;
+  grid-gap: $gridGap;
+  grid-template-areas: $gridAreas;
+  @content
+}

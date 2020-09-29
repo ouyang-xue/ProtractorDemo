@@ -1,0 +1,42 @@
+p-multiSelect {
+  .ui-multiselect {
+    border: none;
+    box-shadow: 1px 1px 5px 0px rgba(6, 20, 40, 0.16);
+    &.ui-list-picker {
+      .ui-multiselect-panel {
+        .ui-widget-header {
+          .ui-chkbox-box {
+            height: 15.75px;
+            width: 15.75px;
+
+            .ui-chkbox-icon {
+              height: 14px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    &.filter-box, &.filter-box-package {
+      color: #212121;
+
+      .ui-multiselect-panel {
+        width: auto;
+        .ui-multiselect-items-wrapper {
+          .ui-multiselect-items {
+            .ui-multiselect-item {
+              &:hover {
+                background-color: #191b1f;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .ui-multiselect-label-container {
+        padding: 5px 22px 4px 10px;
+      }
+    }
+  }
+}

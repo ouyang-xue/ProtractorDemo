@@ -1,0 +1,45 @@
+$headerHeight: 55px;
+
+$mainFontSize: 12px;
+
+$btnFontSize: 14px;
+
+$hasErrorColor: #d9534f;
+
+$widgetMargin: 10px;
+$widgetProjector‬‏: 1280px;
+$widgetTitleHeight: 48px;
+$widgetTitleColor: rgba(225, 225, 225, .8);
+
+
+$color-side-menu: rgba(255, 255, 255, .7);
+$bg-color-side-menu: rgba(35, 44, 63, .95);
+$tooltipBgColor: #4b525d;
+$elementBackgroundColor: rgba(35, 44, 63, 0.98);
+$modal-body-bg-color: rgba(255, 255, 255, 0.9);
+$app-color: #8262e0;
+$text-title-color: #fff;
+$standard-text-color: rgba(36, 51, 62, 0.8);
+$list-item-bg-color: rgba(35, 44, 63, 0.98);
+$modal-footer-bg-color: #c7c9db;
+
+$form-width: 550px;
+$form-input-width: 394px;
+$form-input-max-width: 397px;
+
+$overlay-panel-bg-color: rgba(35, 44, 63, 0.98);
+
+:root {
+  --app-color: #8262e0;
+  --widget-header-bg-color: rgba(255, 255, 255, 0.2);
+  --widget-body-bg-color: rgba(255, 255, 255, 0.8);
+  --modal-header-bg-color: rgba(255, 255, 255, 0.3);
+  --modal-body-bg-color: rgba(255, 255, 255, 0.9);
+  --modal-footer-bg-color: #c7c9db;
+  --text-title-color: #fff;
+  --standard-text-color: rgba(36, 51, 62, 0.8);
+  --standard-box-shadow: 0.1rem 0.1rem 1rem 0 rgba(6, 20, 40, 0.05);
+  --list-item-bg-color: rgba(35, 44, 63, 0.98);
+
+}
+

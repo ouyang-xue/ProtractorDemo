@@ -1,0 +1,91 @@
+@import "../variables";
+.ui-accordion {
+  overflow-y: initial;
+  &.wizard-accordion {
+    .ui-accordion-content{
+      border:0;
+      padding: 30px 0 30px 70px;
+      background: #d9dfef;
+      //min-height: 336px;
+    }
+    .accordion-tab-wrapper {
+      .ui-accordion-header {
+        display: block;
+        padding: .5em;
+        height: 48px;
+        width: $form-width;
+        background-color: #8193c3;
+        box-shadow: inset 0px -3px 22px -8px #061428;
+        margin-top: 0px;
+        :focus {outline:0 !important;}
+        &.ui-accordion-header:hover {
+          border-color: unset;
+          background-color: #8193c3;
+        }
+        &.ui-accordion-header:hover a {
+          color: white;
+        }
+        .fa-caret-down:before {
+          margin: auto;
+          align-items: center;
+          content: '';
+          mask: url('/assets/svgs/arrow-white.svg') 50% 50% / contain no-repeat;
+          background: white;
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          &::before {
+            content: '';
+          }
+          transition: transform 0.2s ease-in;
+        }
+        .fa-caret-right:before{
+          margin: auto;
+          align-items: center;
+          content: '';
+          mask: url('/assets/svgs/arrow-white.svg') 50% 50% / contain no-repeat;
+          background: white;
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          &::before {
+            content: '';
+          }
+          transition: transform 0.2s ease-in;
+          transform: rotate(180deg);
+        }
+      }
+      & .svg-icon.delete{
+        left: 105px!important;
+        top: 15px!important;
+        border: none;
+      }
+      .ui-state-default {
+        border: none;
+      }
+      a {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        color: white;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+      }
+      &:last-child {
+        .ui-accordion-header {
+          box-shadow: none;
+        }
+      }
+      p-accordionTab{
+        &.prevent-click{
+          .ui-accordion-header{
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+

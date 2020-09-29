@@ -1,0 +1,23 @@
+p-radioButton.link-selection {
+    .ui-radiobutton {
+        display: none;
+    }
+    .ui-radiobutton-label{
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        padding: 0 5%;
+        font-family: Roboto;
+        color:  rgba(36, 51, 62, 0.8);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 40px;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &.ui-label-active{
+            background-color: rgba(111, 144, 230, 0.3);
+        }
+    }
+}

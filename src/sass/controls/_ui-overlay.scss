@@ -1,0 +1,9 @@
+.ui-overlaypanel {
+  &.grid-context-menu {
+    box-shadow: none;
+    border: none;
+    .ui-overlaypanel-content {
+      padding: 0;
+    }
+  }
+}

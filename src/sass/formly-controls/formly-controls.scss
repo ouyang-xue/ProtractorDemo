@@ -1,0 +1,93 @@
+@import './accordion';
+@import './panelMenu';
+@import "./text-input";
+@import './drop-down';
+@import './auto-complete';
+@import './textarea';
+@import './chips';
+@import './radio-button';
+
+form.formly {
+  box-sizing: border-box;
+  height: 100%;
+
+  &.ng-untouched.ng-pristine.ng-invalid {
+    background-color: transparent;
+  }
+
+  &.ng-pristine.ng-invalid.ng-touched {
+    background-color: transparent;
+  }
+  formly-field {
+    display: block;
+    &.row {
+      formly-wrapper-validation-messages {
+        formly-repeat-section {
+          .formly-repeter {
+
+          }
+        }
+      }
+    }
+    textarea:disabled, input:disabled,
+    .ui-dropdown.ui-state-disabled,
+    .ui-dropdown.ui-state-disabled .ui-dropdown-label {
+      background-color: transparent;
+      border: 0;
+      color: rgba(36, 51, 62, 0.8);
+      opacity: 1;
+      padding: 0;
+    }
+    .ui-dropdown.ui-state-disabled .ui-dropdown-trigger{
+      display: none;
+    }
+    .form-group {
+      .form-control-label {
+        padding-bottom: 10px;
+      }
+      .form-control{
+        outline: none;
+        &.ng-invalid.ng-touched{
+          border: 1px solid #ff6165;
+        }
+      }
+    }
+    .error-wrapper {
+      display: flex;
+      align-items: center;
+      .ff-error {
+        padding-left: 5px;
+      }
+      i{
+        &.invalid{
+          height: 31px;
+          width: 28px;
+        }
+      }
+    }
+    & + formly-field {
+      &:first-child {
+        margin-top: initial;
+      }
+      margin-top: 30px;
+    }
+    &.endpoints {
+      margin-top: initial;
+    }
+    .read-only {
+      .form-control-value {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255,255,255,0.5);
+        width: 397px;
+        border-radius: 2px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.ui-autocomplete-panel.ui-widget-content.ui-corner-all.ui-shadow {
+  background-color: white;
+}

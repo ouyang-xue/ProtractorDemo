@@ -1,0 +1,19 @@
+<app-modal
+  [modalTitle]="modalTitle"
+  [showDelete]="true"
+  (deleteAction)="delete()"
+  (applyAction)="apply()"
+>
+
+  <div>
+    <p data-form-modal>This is a modal. This is a modal. This is a modal. This is a modal. This is a modal. This is a modal.</p>
+    <form>
+      <div *ngFor="let content of contents">
+        <label>{{content}}:</label>
+        <input type="text" data-input-example>
+      </div>
+    </form>
+  </div>
+
+</app-modal>
+

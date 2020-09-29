@@ -1,0 +1,40 @@
+@import "../variables";
+
+p-chips{
+  &.ng-invalid.ng-touched {
+    border: 1px solid #ff6165;
+  }
+  &.ng-invalid {
+    div {
+      &.ui-chips {
+        border: none;
+      }
+    }
+  }
+  .ui-chips{
+    &.formly-chips{
+      width: 100%;
+      max-width: $form-input-max-width;
+      ul{
+        display: block;
+        min-height: 80px;
+        width: 100%;
+        .ui-chips-token{
+          font-size: 14px;
+          background: #c1dff9;
+          .ui-chips-token-icon{
+            font-size: 12px;
+          }
+          .ui-chips-token-label{
+            margin-right: 1em;
+          }
+        }
+        .ui-chips-input-token{
+          input{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

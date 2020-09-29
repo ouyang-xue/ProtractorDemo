@@ -1,0 +1,158 @@
+@import "../variables";
+@import "app-theme";
+
+$sub-background-color: #000000;
+
+.daterangepicker {
+  padding: 5px 5px 10px 5px !important;
+  &.dropdown-menu {
+    background: $elementBackgroundColor;
+    display: none;
+    .ranges {
+      //ul {
+      //  margin-top: 30px;
+      //}
+      ul{
+        text-transform: lowercase;
+
+
+      li {
+        padding: 3px 8px !important;
+        color: #FFFFFF;
+        border: none;
+        background: none;
+        border-radius: 0px;
+        height: 40px;
+        line-height: 40px;
+
+        &.active {
+          background: $sub-background-color;
+          opacity: 0.5;
+        }
+
+        &:hover {
+          background: $sub-background-color;
+          opacity: 0.5;
+        }
+        &:first-letter{
+          text-transform: uppercase;
+        }
+      }
+      }
+      .range_inputs {
+        .applyBtn {
+          position: absolute;
+          right: 8px;
+          color: $text-title-color !important;
+          background-color: $appPrimaryColor !important;
+          border-radius: 2px;
+          border: 0 !important;
+          padding: 5px 15px;
+        }
+
+        .cancelBtn {
+          text-align: left;
+          font-weight: 400;
+          border-radius: 0;
+          font-size: 14px;
+          border: 0;
+          background-color: $elementBackgroundColor !important;
+          text-decoration: underline;
+          outline: none !important;
+          color: #FFFFFF !important;
+        }
+      }
+    }
+
+    .calendar {
+      color: #FFFFFF !important;
+
+      &.left {
+        margin-right: 5px !important;
+      }
+
+      &.right {
+        margin-left: 5px !important;
+      }
+
+      .daterangepicker_input {
+        line-height: 18px;
+        pointer-events: none;
+      }
+
+      .input-mini {
+        padding: 0 6px 0 10px !important;
+        width: 130px;
+        height: 22px;
+        &.form-control{
+          border-radius: 0px !important;
+        }
+      }
+
+      .calendar-table {
+        background: $sub-background-color;
+        opacity: 0.8;
+        border: none;
+
+        .table-condensed {
+          text-transform: uppercase;
+        }
+
+        td.active.start-date, td.active.end-date {
+          background-color: $appPrimaryColor !important;
+          border-radius: 50%;
+        }
+
+        td.in-range.available:not(.end-date) {
+          background-color: $appPrimaryColor !important;
+          opacity: 0.3;
+        }
+
+        td.off.available, td.off.disabled {
+          background: $sub-background-color;
+          color: #FFFFFF !important;
+          opacity: 0.4;
+        }
+
+        th.available, td.available {
+          &:hover {
+            background-color: $appPrimaryColor !important;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .daterangepicker_input {
+        //display: flex !important;
+        display:none;
+        align-items: baseline;
+
+        .fa-calendar, glyphicon-calendar {
+          display: none;
+          &:before {
+            content: '';
+          }
+        }
+
+        .calendar-time {
+          text-align: left !important;
+          padding-left: 10px !important;
+          .fa-clock-o {
+            display: none !important;
+          }
+          .hourselect {
+            color: #555;
+          }
+          .minuteselect {
+            color: #555;
+          }
+        }
+      }
+
+    }
+  }
+
+  &::after, &::before {
+    display: none !important;
+  }
+}

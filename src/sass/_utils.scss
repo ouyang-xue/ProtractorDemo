@@ -1,0 +1,73 @@
+
+.cwu-reset {
+  padding: 0;
+  margin: 0;
+}
+
+.cwu-fit-content {
+  height: fit-content;
+}
+
+.cwu-flex {
+  display: flex;
+  .vertical-align {
+    align-items: center;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+$flexJustify: (baseline, flex-start, flex-end, start, center, end, space-between, space-around, space-evenly stretch);
+$flexAlign: (flex-start, flex-end, start, center, end, stretch);
+
+
+
+.flx-col {
+  flex-direction: column;
+}
+.flx, .flx-col {
+  display: flex;
+  @each $fxJustify in $flexJustify {
+    @each $fxAlignItems in $flexAlign {
+      &.flx-align-#{$fxJustify}-#{$fxAlignItems} {
+        justify-content: $fxJustify;
+        align-items: $fxAlignItems;
+      }
+    }
+  }
+}
+
+$spaces: (5, 10, 15, 20, 25, 30);
+$direction: (top, right, bottom, left);
+
+@each $space in $spaces {
+  .pad-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .pad-lr-#{$space} {
+    padding-left: #{$space}px !important;
+    padding-right: #{$space}px !important;
+  }
+
+  .pad-tb-#{$space} {
+    padding-top: #{$space}px !important;
+    padding-bottom: #{$space}px !important;
+  }
+
+  @each $dir in $direction {
+    .pad-#{str_slice($dir,0,1)}-#{$space} {
+      padding-#{$dir}: #{$space}px !important;
+    }
+  }
+
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 1px);
+}

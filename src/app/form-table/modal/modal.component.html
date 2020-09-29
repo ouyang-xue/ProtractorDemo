@@ -1,0 +1,13 @@
+<app-modal-header [title]="modalTitle" [bsModalRef]="bsModalRef"></app-modal-header>
+
+<section class="modal-warp modal-body">
+  <ng-content></ng-content>
+</section>
+
+<app-modal-footer
+  [showDelete]="showDelete"
+  (deleteAction)="deleteClicked()"
+  [showApply]="showApply"
+  (applyAction)="applyClicked()"
+  [bsModalRef]="bsModalRef">
+</app-modal-footer>

@@ -1,0 +1,30 @@
+<div class="ui-layout modal-footer" ui-layout-align="space-between">
+  <div>
+    <button
+      type="button"
+      *ngIf="showDelete"
+      class="btn btn-link delete-button"
+      data-btn-delete
+      (click)="deleteClicked()">
+      {{'Delete'}}
+    </button>
+  </div>
+  <div>
+    <button
+      type="button"
+      [disabled]="applyButtonDisabled"
+      *ngIf="showApply"
+      class="btn btn-default"
+      data-btn-apply
+      (click)="applyClicked()">
+      {{applyButtonText}}
+    </button>
+    <button
+      type="button"
+      class="btn btn-link"
+      data-btn-cancel
+      (click)="bsModalRef.hide()">
+      {{'Cancel'}}
+    </button>
+  </div>
+</div>

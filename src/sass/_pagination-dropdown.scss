@@ -1,0 +1,31 @@
+.pagination-dropdown {
+  margin: 0 8px;
+
+
+  .ui-dropdown-label {
+    height: 15px;
+    line-height: 15px;
+  }
+
+  .ui-dropdown-trigger {
+    width: 0.5em !important;
+
+    .ui-dropdown-trigger-icon {
+      width: 10px !important;
+    }
+  }
+
+  .ui-dropdown-panel {
+    .ui-dropdown-items-wrapper {
+      overflow: initial;
+    }
+  }
+
+  .ui-dropdown-list {
+    &.ui-widget-content {
+        max-height: 200px;
+        overflow-y: auto;
+      position: initial;
+    }
+  }
+}

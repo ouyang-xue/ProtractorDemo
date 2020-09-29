@@ -1,0 +1,19 @@
+.modal-dialog {
+  margin-top: 2rem;
+
+  &.example-modal .modal-content {
+    width: 80rem;
+    left: -30%;
+    top: 4rem;
+  }
+
+  .modal-content {
+    background-color: transparent !important;
+
+    .modal-body {
+      height: 100%;
+      width: 100%;
+      background-color: var(--modal-body-bg-color);
+    }
+  }
+}
